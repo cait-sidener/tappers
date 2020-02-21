@@ -1,0 +1,71 @@
+<div class="px-6 py-4">
+	<form (ngSubmit)="onSubmit()">
+		<!--Fields-->
+		<div class="flex justify-around mb-4">
+			<div class="mr-4">
+				<label class="block text-xs mr-2">
+					First Name
+					<svg *ngIf="editMode" class="inline align-baseline" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+						<path fill="none" d="M0 0h24v24H0V0z" />
+						<path class="fill-current" d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z" />
+					</svg>
+				</label>
+				<input class="input-underline" [(ngModel)]="userData && userData.firstName" name="firstName" [readonly]="!editMode" />
+			</div>
+			<div class="mr-4">
+				<label class="block text-xs mr-2">
+					Last Name
+					<svg *ngIf="editMode" class="inline align-baseline" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+						<path fill="none" d="M0 0h24v24H0V0z" />
+						<path class="fill-current" d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z" />
+					</svg>
+				</label>
+				<input class="input-underline" [(ngModel)]="userData && userData.lastName" name="lastName" [readonly]="!editMode" />
+			</div>
+			<div class="mr-4">
+				<label class="block text-xs mr-2">Email</label>
+				<input class="input-underline" [(ngModel)]="userData && userData.email" name="email" readonly />
+			</div>
+		</div>
+		<div class="flex mb-4">
+			<!--Groups-->
+			<div class="w-3/4">
+				<p>TODO; Group Assignment</p>
+				<p>Allow assignment of multiple group roles for the user.</p>
+				<p>For use in basic Authorization.</p>
+			</div>
+			<!--Flags-->
+			<div class="w-1/6">
+				<label class="ml-2">
+					Flags
+					<svg *ngIf="editMode" class="inline align-baseline" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+						<path fill="none" d="M0 0h24v24H0V0z" />
+						<path class="fill-current" d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z" />
+					</svg>
+				</label>
+				<div class="border rounded-sm p-2">
+					<div>
+						<input class="mr-2" [(ngModel)]="userData && userData.isAdmin" name="isAdmin" type="checkbox" [disabled]="!editMode || (userData && userData.userID === currentUserID)" />
+						<label>Admin</label>
+					</div>
+					<div>
+						<input class="mr-2" [(ngModel)]="userData && userData.isActive" name="isActive" type="checkbox" [disabled]="!editMode || (userData && userData.userID === currentUserID)" />
+						<label>Active</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Buttons-->
+		<div *ngIf="userData" class="flex justify-end">
+			<div class="flex">
+				<button (click)="toggleEditMode()" class="btn btn-primary btn-animated rounded-sm" type="button">{{editMode ? 'Cancel' : 'Edit User'}}</button>
+				<button *ngIf="editMode" class="btn btn-primary btn-animated rounded-sm ml-4" type="submit">Save</button>
+			</div>
+		</div>
+	</form>
+	<div *ngIf="!userData || isLoading">
+		<div class="flex justify-end mt-4">
+			<app-loader [text]="loadingText" [type]="0"></app-loader>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,163 @@
+a {
+	@apply cursor-pointer text-gray-600;
+
+	&:focus,
+	&:hover {
+		@apply bg-blue-100;
+	}
+
+	svg {
+		@apply mr-2;
+	}
+}
+
+svg {
+	display: inline;
+	vertical-align: top;
+	transition: transform 0.3s ease-in-out;
+}
+
+ul {
+	@apply w-full;
+
+	li > a {
+		@apply block border-l-2 border-transparent pl-8 py-3;
+		text-decoration: none;
+	}
+
+	li:nth-child(1) {
+		a {
+			&:focus,
+			&:hover {
+				@apply bg-blue-100;
+			}
+
+			&.active-link {
+				@apply border-blue-500;
+			}
+
+			& path.fill-current {
+				@apply text-blue-500;
+			}
+		}
+	}
+
+	li:nth-child(2) {
+		a {
+			&:focus,
+			&:hover {
+				@apply bg-indigo-100;
+			}
+
+			&.active-link {
+				@apply border-indigo-500;
+			}
+
+			& path.fill-current {
+				@apply text-indigo-500;
+			}
+		}
+	}
+
+	li:nth-child(3) {
+		a {
+			&:focus,
+			&:hover {
+				@apply bg-green-100;
+			}
+
+			&.active-link {
+				@apply border-green-500;
+			}
+
+			& path.fill-current {
+				@apply text-green-500;
+			}
+		}
+	}
+
+	li:nth-child(4) {
+		a {
+			&:focus,
+			&:hover {
+				@apply bg-red-100;
+			}
+
+			&.active-link {
+				@apply border-red-500;
+			}
+
+			& path.fill-current {
+				@apply text-red-500;
+			}
+		}
+	}
+
+	li:nth-child(5) {
+		a {
+			&:focus,
+			&:hover {
+				@apply bg-yellow-100;
+			}
+
+			&.active-link {
+				@apply border-yellow-500;
+			}
+
+			& path.fill-current {
+				@apply text-yellow-500;
+			}
+		}
+	}
+
+	li:nth-child(6) {
+		a {
+			&:focus,
+			&:hover {
+				@apply bg-orange-100;
+			}
+
+			&.active-link {
+				@apply border-orange-500;
+			}
+
+			& path.fill-current {
+				@apply text-orange-500;
+			}
+		}
+	}
+}
+
+.fade {
+	transition: opacity 0.3s ease-in-out;
+}
+
+.rotate-180 {
+	transform: rotate(180deg);
+}
+
+#overlay {
+	transition: opacity 0.3s ease-in-out;
+}
+
+#sidebar {
+	left: 0;
+	transition: transform 0.3s ease-in-out;
+
+	&.hide {
+		transform: translateX(-100%);
+
+		@screen md {
+			transform: none;
+		}
+	}
+}
+
+#topbar {
+	top: 0;
+	transition: transform 0.3s ease-in-out;
+
+	@screen md {
+		transform: translateY(-100%);
+	}
+}

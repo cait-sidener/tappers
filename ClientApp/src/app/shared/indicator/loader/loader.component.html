@@ -1,0 +1,10 @@
+<div *ngIf="type === 0; else largeLoader">
+	<div class="flex">
+		<div class="loader-sm mr-2"></div>
+		<p *ngIf="text" class="text-xs">{{text}}</p>
+	</div>
+</div>
+<ng-template #largeLoader>
+	<div class="loader mx-auto my-4"></div>
+	<h4 *ngIf="text">{{text}}</h4>
+</ng-template>

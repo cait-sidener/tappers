@@ -1,0 +1,10 @@
+table {
+	tbody tr {
+		cursor: pointer;
+
+		&.active,
+		&:hover {
+			@apply bg-blue-100;
+		}
+	}
+}

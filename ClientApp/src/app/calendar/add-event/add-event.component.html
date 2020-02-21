@@ -1,0 +1,34 @@
+<div class="modal-body col-xs-12 col-12 col-md-8">
+	<form (ngSubmit)="onSubmit()">
+		<div class="form-group">
+			<label for="title">Event Title</label>
+			<input type="text"
+				   placeholder="Jazz Show"
+				   id="title"
+				   required
+				   name="title"
+				   class="form-control m-2"
+				   [(ngModel)]="title" />
+		</div>
+		<div class="form-group">
+			<label for="start">Start Date & Time</label>
+			<input type="date"
+				   placeholder="7:00pm"
+				   id="start"
+				   required
+				   name="start"
+				   class="form-control m-2"
+				   [(ngModel)]="startDate" />
+		</div>
+		<div class="form-group">
+			<label for="end">End Date & Time</label>
+			<input type="date"
+				   placeholder="10:00pm"
+				   id="end"
+				   name="end"
+				   class="form-control m-2"
+				   [(ngModel)]="endDate" />
+		</div>
+		<button class="btn btn-success" type="submit">Save</button>
+	</form>
+</div>

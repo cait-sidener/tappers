@@ -1,0 +1,30 @@
+<div class="card p-4">
+	<h1>Profile</h1>
+	<h4>This is a protected route, user will be blocked if not authenticated.</h4>
+	<h6>{{protectedData}}</h6>
+	<form (ngSubmit)="onSubmit_ChangePassword()">
+		<div class="mb-3">
+			<input class="input-outline w-full" name="currentPassword" type="password" autocomplete="current-password" placeholder="Current Password"
+				   #currentPasswordLocal="ngModel" ngModel (ngModelChange)="currentPassword = $event" required />
+		</div>
+		<hr />
+		<div class="mb-3">
+			<input class="input-outline w-full" name="newPassword" type="password" placeholder="New Password"
+				   #newPasswordLocal="ngModel" ngModel (ngModelChange)="newPassword = $event" required />
+		</div>
+		<div class="mb-3">
+			<input class="input-outline w-full" name="verifyPassword" type="password" placeholder="Confirm Password"
+				   #verifyPasswordLocal="ngModel" ngModel (ngModelChange)="verifyPassword = $event" required />
+		</div>
+		<div class="mb-2">
+			<button class="btn btn-primary btn-animated rounded-sm w-full" type="submit">Change</button>
+		</div>
+		<ul>
+			<li>-1: Possible?</li>
+			<li>0: Password was changed.</li>
+			<li>1: Current Password is invalid.</li>
+			<li>2: New Password is the same as current.</li>
+		</ul>
+		{{code}}
+	</form>
+</div>

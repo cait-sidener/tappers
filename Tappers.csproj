@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\src\app\calendar\calendar-routing.module.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\calendar\calendar.module.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\calendar\calendarEvent.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\calendar\_services\calendar.service.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\calendar\_services\index.ts" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.7.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>KDOT - SSO</title>
+	<base href="/">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+	<app-root>
+		<style>
+			html {
+				font-family: Roboto;
+				font-size: 16px;
+				background-color: #f7fafc;
+				color: #4a5568;
+				line-height: 1.5;
+			}
+
+			.loader {
+				border: 0.25rem solid #edf2f7;
+				border-top: 0.25rem solid #4299e1;
+				border-radius: 50%;
+				width: 5rem;
+				height: 5rem;
+				animation: spin 1.5s linear infinite;
+			}
+
+			.text {
+				text-align: center;
+				margin-top: 1rem;
+				font-size: 1.35rem;
+			}
+
+			@keyframes spin {
+				0% {
+					transform: rotate(0deg);
+				}
+
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+		<div style="height:98vh; display: flex; flex-direction: column; justify-content: center;">
+			<div class="loader" style="margin: 0 auto;"></div>
+			<div class="text">KDOT</div>
+		</div>
+	</app-root>
+<script src="runtime.js" type="module"></script><script src="polyfills.js" type="module"></script><script src="styles.js" type="module"></script><script src="scripts.js" defer></script><script src="vendor.js" type="module"></script><script src="main.js" type="module"></script></body>
+</html>
