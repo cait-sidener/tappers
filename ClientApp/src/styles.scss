@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 /*Tailwind CSS Injection*/
 @tailwind base;
@@ -41,9 +42,12 @@ hr {
 }
 
 html {
-	font-family: Roboto;
+	background-image: url("./assets/images/img_0030.jpg") !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	font-family: 'Poppins' !important;
 	font-size: 16px;
-	@apply bg-gray-100 text-gray-600;
 }
 
 svg {
@@ -117,3 +121,16 @@ svg {
 	}
 }
 /*#endregion Browser Pseudo Elements*/
+
+.fc-button {
+	background-color: #000 !important;
+	border-color: #000 !important;
+	color: #fff !important;
+}
+
+h2, th {
+	 letter-spacing: 5px;
+	 text-transform: uppercase;
+ }
+
+

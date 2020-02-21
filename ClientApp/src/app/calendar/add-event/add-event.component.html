@@ -1,34 +1,38 @@
-<div class="modal-body col-xs-12 col-12 col-md-8">
+<div class="modal-body col-xs-12 col-12 col-md-8 py-4 px-8">
 	<form (ngSubmit)="onSubmit()">
-		<div class="form-group">
-			<label for="title">Event Title</label>
-			<input type="text"
-				   placeholder="Jazz Show"
-				   id="title"
-				   required
-				   name="title"
-				   class="form-control m-2"
-				   [(ngModel)]="title" />
+		<div class="form-group flex-col flex">
+			<div>
+				<label for="title">Event Title</label>
+			</div>
+			<div>
+				<input type="text"
+					   placeholder="Jazz Show"
+					   id="title"
+					   required
+					   name="title"
+					   class="form-control border rounded w-full"
+					   [(ngModel)]="title" />
+			</div>
 		</div>
-		<div class="form-group">
+		<div class="form-group w-full flex-col flex my-4">
 			<label for="start">Start Date & Time</label>
 			<input type="date"
 				   placeholder="7:00pm"
 				   id="start"
 				   required
 				   name="start"
-				   class="form-control m-2"
+				   class="form-control border rounded"
 				   [(ngModel)]="startDate" />
 		</div>
-		<div class="form-group">
+		<div class="form-group w-full flex-col flex">
 			<label for="end">End Date & Time</label>
 			<input type="date"
 				   placeholder="10:00pm"
 				   id="end"
 				   name="end"
-				   class="form-control m-2"
+				   class="form-control border rounded"
 				   [(ngModel)]="endDate" />
 		</div>
-		<button class="btn btn-success" type="submit">Save</button>
+		<button class="rounded bg-black text-white w-full p-2 mt-4" type="submit">Save</button>
 	</form>
 </div>

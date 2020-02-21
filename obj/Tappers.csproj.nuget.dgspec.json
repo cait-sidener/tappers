@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cait.Sidener\\source\\repos\\Tappers\\Tappers.csproj": {}
+    "C:\\Users\\Cait.Sidener\\Desktop\\Tappers\\Tappers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cait.Sidener\\source\\repos\\Tappers\\Tappers.csproj": {
+    "C:\\Users\\Cait.Sidener\\Desktop\\Tappers\\Tappers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cait.Sidener\\source\\repos\\Tappers\\Tappers.csproj",
+        "projectUniqueName": "C:\\Users\\Cait.Sidener\\Desktop\\Tappers\\Tappers.csproj",
         "projectName": "Tappers",
-        "projectPath": "C:\\Users\\Cait.Sidener\\source\\repos\\Tappers\\Tappers.csproj",
+        "projectPath": "C:\\Users\\Cait.Sidener\\Desktop\\Tappers\\Tappers.csproj",
         "packagesPath": "C:\\Users\\Cait.Sidener\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cait.Sidener\\source\\repos\\Tappers\\obj\\",
+        "outputPath": "C:\\Users\\Cait.Sidener\\Desktop\\Tappers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
