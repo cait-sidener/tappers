@@ -42,12 +42,9 @@ hr {
 }
 
 html {
-	background-image: url("./assets/images/img_0030.jpg") !important;
-	background-position: center !important;
-	background-repeat: no-repeat !important;
-	background-size: cover !important;
 	font-family: 'Poppins' !important;
 	font-size: 16px;
+	text-transform: uppercase !important;
 }
 
 svg {
@@ -123,14 +120,20 @@ svg {
 /*#endregion Browser Pseudo Elements*/
 
 .fc-button {
-	background-color: #000 !important;
-	border-color: #000 !important;
+	background-color: #5d441c !important;
+	border-color: #5d441c !important;
 	color: #fff !important;
 }
 
 h2, th {
-	 letter-spacing: 5px;
-	 text-transform: uppercase;
- }
+	color: #5d441c;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+.fc-day-number {
+	color: #e2c7ac;
+	text-shadow: 1px 1px #5d441c
+}
 
 

@@ -9,12 +9,14 @@ import { SharedModule } from './shared/shared.module';
 import { AccountModule } from './account/account.module';
 import { TokenInterceptor } from './shared/security/_interceptor';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { ArchivesModule } from '../app/archives/archives.module';
 
 @NgModule({
 	declarations: [
 		AppComponent
 	],
 	imports: [
+		ArchivesModule,
 		BrowserModule,
 		HttpClientModule,
 		SharedModule,

@@ -41,8 +41,9 @@ export class CalendarFormComponent implements OnInit {
 			events: (fetchInfo, successCallback) => {
 				this.calendarService.getEvents(fetchInfo, successCallback)
 			},
-			eventBackgroundColor: '#6e0605',
-			eventBorderColor: '#6e0605',
+			eventBackgroundColor: '#507169',
+			eventBorderColor: '#507169',
+			eventTextColor: '#e2c7ac',
 			displayEventTime: false,
 			header: {
 				left: 'event',

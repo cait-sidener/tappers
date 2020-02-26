@@ -5,8 +5,8 @@ import { CalendarFormComponent } from './calendar/calendar-form/calendar-form.co
 
 
 const routes: Routes = [
-    { path: '', component: CalendarFormComponent, pathMatch: 'full' }, //Homepage
-    { path: '**', redirectTo: '', pathMatch: 'full' } //Custom 404 page here.
+	{ path: '', component: CalendarFormComponent, pathMatch: 'full' }, //Homepage
+	{ path: '**', component: NotFoundComponent, pathMatch: 'full' } //Custom 404 page here.
 ];
 
 @NgModule({

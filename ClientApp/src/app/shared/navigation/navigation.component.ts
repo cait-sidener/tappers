@@ -22,6 +22,12 @@ export class NavigationComponent implements OnInit, OnDestroy {
 	private subscription: Subscription = new Subscription();
 
 	constructor(private cdr: ChangeDetectorRef, private router: Router, public navService: NavigationService) { }
+	data() {
+		return {
+			isOpen: false,
+		}
+	}
+
 
 	check(): void { //Always run check if changes in component need to be reflected on view.
 		this.cdr.markForCheck();

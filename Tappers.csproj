@@ -6,6 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\account\account-routing.module.ts" />
+    <None Remove="ClientApp\src\app\account\account.module.ts" />
+    <None Remove="ClientApp\src\app\account\login\login.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\src\app\account\user.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\archives\archives-routing.module.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\archives\archives.module.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\calendar\calendar-routing.module.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\calendar\calendar.module.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\calendar\calendarEvent.ts" />

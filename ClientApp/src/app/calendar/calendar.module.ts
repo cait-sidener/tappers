@@ -11,6 +11,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
 	declarations: [
@@ -25,7 +26,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 		CalendarRoutingModule,
 		CommonModule,
 		FormsModule,
-		FullCalendarModule,
+        FullCalendarModule,
+        SharedModule
 	],
 	providers: [
 		CalendarService
