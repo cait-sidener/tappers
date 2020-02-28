@@ -7,10 +7,10 @@ import { UserService } from '../../account/user.service';
 @Component({
 	selector: 'app-navigation',
 	templateUrl: './navigation.component.html',
-	styleUrls: ['./navigation.component.scss'],
-	changeDetection: ChangeDetectionStrategy.OnPush
+    styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent implements OnInit, OnDestroy {
+
 	displayName: string = '';
 	showSidebar: boolean = false;
 	showExpanded: boolean = false;
@@ -57,6 +57,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
 	logout() {
 		this.auth.signOut();
-	}
+    }
 
 }
+

@@ -5,7 +5,7 @@ import { AddEventComponent } from './add-event/add-event.component';
 import { AuthGuard } from '../account/auth.guard';
 
 const routes: Routes = [
-    { path: 'calendar', component: CalendarFormComponent },
+    { path: 'calendar', component: CalendarFormComponent, data: { animation: 'isLeft' } },
     { path: 'add-event', component: AddEventComponent, canActivate: [AuthGuard] }
 ];
 

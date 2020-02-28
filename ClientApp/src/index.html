@@ -5,45 +5,53 @@
 	<title>Eighth Street Taproom</title>
 	<base href="/">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="css/hover.css" rel="stylesheet" media="all">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<app-root>
 		<style>
-			html {
-				font-family: 'Poppins' !important;
-				font-size: 16px;
-				line-height: 1.5;
+			body, html {
+				margin: 0;
+				padding: 0;
+				height: 100%;
 			}
 
-			.loader {
-				border: 0.25rem solid #edf2f7;
-				border-top: 0.25rem solid #4299e1;
-				border-radius: 50%;
-				width: 5rem;
-				height: 5rem;
-				animation: spin 1.5s linear infinite;
+			body {
+				font-family: 'Cabin Condensed', sans-serif;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 			}
 
-			.text {
-				text-align: center;
-				margin-top: 1rem;
-				font-size: 1.35rem;
-			}
-
-			@keyframes spin {
-				0% {
-					transform: rotate(0deg);
-				}
-
-				100% {
-					transform: rotate(360deg);
-				}
+			svg {
+				font-weight: bold;
+				max-width: 600px;
+				height: auto;
 			}
 		</style>
-		<div style="height:98vh; display: flex; flex-direction: column; justify-content: center;">
-			<div class="loader" style="margin: 0 auto;"></div>
-		</div>
+		<svg viewbox="0 0 100 20">
+			<defs>
+				<linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+					<stop offset="5%" stop-color="#326384" />
+					<stop offset="95%" stop-color="#123752" />
+				</linearGradient>
+				<pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+					<path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)">
+						<animateTransform attributeName="transform"
+										  begin="0s"
+										  dur="1.5s"
+										  type="translate"
+										  from="0,0"
+										  to="40,0"
+										  repeatCount="indefinite" />
+					</path>
+				</pattern>
+			</defs>
+			<text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)" fill-opacity="0.6">LOADING</text>
+			<text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.1">LOADING</text>
+		</svg>
 	</app-root>
 </body>
 </html>

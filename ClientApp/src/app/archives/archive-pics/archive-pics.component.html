@@ -37,9 +37,13 @@
 				</div>
 			</ng-template>
 		</ngb-carousel>
-		<div class="flex justify-center text-tan my-4">
-			<button (click)="goToSlide('slideThree')" class="fa fa-pause"></button>
-			<button (click)="pauseCarousel()" class="fa fa-play mx-4"></button>
+		<div class="flex justify-center items-center my-4">
+			<button aria-label="Pause" (click)="pauseCarousel()" class="hover:bg-yellow-700 focus:outline-none rounded-full bg-yellow-200 h-10 w-10">
+					<i class="fa fa-pause"></i>
+			</button>
+			<button aria-label="Play" (click)="startCarousel()" class="hover:bg-yellow-700 focus:outline-none rounded-full bg-yellow-200 h-10 w-10 ml-4">
+					<i class="fa fa-play"></i>
+			</button>
 		</div>
 	</div>
 </div>

@@ -3,7 +3,7 @@ import { ArchivePicsComponent } from './archive-pics/archive-pics.component';
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [
-    { path: 'archives', component: ArchivePicsComponent }
+    { path: 'archives', component: ArchivePicsComponent, data: { animation: 'isRight' } }
 ];
 
 @NgModule({

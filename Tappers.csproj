@@ -20,6 +20,7 @@
     <TypeScriptCompile Remove="ClientApp\src\app\calendar\calendarEvent.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\calendar\_services\calendar.service.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\calendar\_services\index.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\shared\navigation\route-animations.ts" />
   </ItemGroup>
 
 

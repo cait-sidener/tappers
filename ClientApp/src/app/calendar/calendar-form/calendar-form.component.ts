@@ -12,11 +12,14 @@ import { CalendarService } from '../_services';
 import { UserService } from '../../account/user.service';
 import { startWith } from 'rxjs/operators';
 import { AngularFirestoreDocument, DocumentData } from '@angular/fire/firestore';
+import { fadeInAnimation } from '../../shared/navigation/route-animations';
 
 @Component({
     selector: 'app-calendar-form',
     templateUrl: './calendar-form.component.html',
-    styleUrls: ['./calendar-form.component.css']
+    styleUrls: ['./calendar-form.component.css'],
+    animations: [fadeInAnimation],
+    host: { '[@fadeInAnimation]': '' }
 })
 export class CalendarFormComponent implements OnInit {
     calendar?: Calendar;

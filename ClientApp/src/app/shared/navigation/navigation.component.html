@@ -1,17 +1,17 @@
 <!--NAVBAR-->
 <header class="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3 z-50 fixed w-full">
 	<div class="flex items-center justify-between py-3 sm:p-0">
-		<div class="xl:pl-10 lg:mr-10 pl-20 md:ml-10 sm:pl-2 xs:pl-2">
-			<a [routerLink]="['/']" [routerLinkActive]="['active-link']"
+		<div class="xl:pl-10 pl-2 lg:mr-10 md:ml-10 sm:pl-2 xs:pl-2">
+			<a aria-label="Eighth Street Taproom Home Page" [routerLink]="['/']"
 			   [routerLinkActiveOptions]="{exact:true}" class="uppercase text-tan hover:text-yellow-200 hover:no-underline">
-				<p>Eighth Street Taproom</p>
-				<p class="text-sm">801 New Hampshire</p>
-				<p class="text-sm">Lawrence, Kansas 66044</p>
+				<p aria-label="Eighth Street Taproom">Eighth Street Taproom</p>
+				<p aria-label="801 New Hampshire" class="text-sm">801 New Hampshire</p>
+				<p aria-label="Lawrence, Kansas 66044" class="text-sm">Lawrence, Kansas 66044</p>
 			</a>
 
 		</div>
 		<div class="sm:hidden">
-			<button (click)="isOpen = !isOpen" type="button" class="block text-tan hover:text-yellow-200 focus:text-yellow-200 focus:outline-none mr-16">
+			<button aria-label="Open Navigation" (click)="isOpen = !isOpen" type="button" class="block text-tan hover:text-yellow-200 focus:text-yellow-200 focus:outline-none mr-16">
 				<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
 					<path v-if="isOpen" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
 					<path v-if="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
@@ -22,20 +22,20 @@
 	<nav [ngClass]="isOpen ? 'block' : 'hidden'" class="sm:flex sm:p-0">
 		<div class="xl:flex xl:justify-end lg:flex lg:justify-end md:flex md:justify-end items-center xl:mr-10 sm:text-sm xs:text-sm">
 			<div>
-				<a [routerLink]="['/']" [routerLinkActive]="['active-link']"
+				<a aria-label="Calendar" [routerLink]="['/']" [routerLinkActive]="['active-link']"
 				   [routerLinkActiveOptions]="{exact:true}" class="block px-2 py-1 text-tan hover:text-yellow-200 hover:no-underline">Calendar</a>
 			</div>
 			<div>
-				<a [routerLink]="['/archives']" [routerLinkActive]="['active-link']" class="block px-2 py-1 text-tan hover:text-yellow-200 sm:mt-0 sm:ml-2 hover:no-underline">Archives</a>
+				<a aria-label="Archives" [routerLink]="['/archives']" [routerLinkActive]="['active-link']" class="block px-2 py-1 text-tan hover:text-yellow-200 sm:mt-0 sm:ml-2 hover:no-underline">Archives</a>
 			</div>
 			<div *ngIf="auth.user$ | async as user; else login">
-				<button class="block uppercase flex items-center xl:px-4 lg:px-4 md:px-4 sm:px-2 xs:px-2 py-1 text-tan hover:text-yellow-200 sm:mt-0 sm:ml-2 focus:outline-none" (click)="auth.signOut()">
+				<button aria-label="Sign Out" class="block uppercase flex items-center xl:px-4 lg:px-4 md:px-4 sm:px-2 xs:px-2 py-1 text-tan hover:text-yellow-200 sm:mt-0 sm:ml-2 focus:outline-none" (click)="auth.signOut()">
 					<img class="w-8 h-8 rounded-full" src="{{user.photoURL}}" />
 					{{user.displayName}}
 				</button>
 			</div>
 			<ng-template #login>
-				<button class="uppercase block px-2 py-1 text-tan hover:text-yellow-200 focus:outline-none" (click)="auth.googleSignin()">Sign In</button>
+				<button aria-label="Sign In" class="uppercase block px-2 py-1 text-tan hover:text-yellow-200 focus:outline-none" (click)="auth.googleSignin()">Sign In</button>
 			</ng-template>
 		</div>
 	</nav>
@@ -47,30 +47,33 @@
 		<div>
 			<ng-content></ng-content>
 		</div>
-		<div>
-			<iframe class="py-4 xl:ml-20 lg:ml-20 md:ml-80 sm:ml-36 xs: ml-10" src="https://open.spotify.com/embed/playlist/0eCwoY2jZKsLv9aCIc9V49" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-		</div>
 	</div>
 </main>
 
 <!--FOOTER-->
 <footer class="bg-gray-900 px-4 py-1 z-50 relative w-full bottom-0 text-tan">
-	<div class="w-full flex justify-center items-center sm:flex sm:flex-col sm:justify-center xs:flex xs:flex-col xs:justify-center">
-		<a [routerLink]="['/']" [routerLinkActive]="['active-link']"
-			   [routerLinkActiveOptions]="{exact:true}" class="sm:text-sm xs:text-sm mt-1 py-1 text-tan rounded hover:text-yellow-200 hover:no-underline whitespace-no-wrap sm:mt-0 sm:ml-2">Eighth Street Taproom </a>
-		<a href="http://maps.google.com/?q=801 New Hampshire St, Lawrence, KS, 66044" target="_blank" class="sm:text-sm xs:text-sm mt-1 hover:no-underline whitespace-no-wrap py-1 text-tan rounded hover:text-yellow-200 sm:mt-0 sm:ml-2">801 New Hampshire, Lawrence, KS 66044 </a>
-		<a href="tel:+17858416918" class="sm:text-sm xs:text-sm whitespace-no-wrap mt-1 py-1 text-tan rounded hover:text-yellow-200 hover:no-underline sm:mt-0 sm:ml-2">(785) 841-6918</a>
+	<div class="flex flex-col justify-center items-center">
+		<div class="flex flex-col justify-center items-center">
+			<a aria-label="Eighth Street Taproom Home Page" [routerLink]="['/']"
+			   [routerLinkActiveOptions]="{exact:true}" class="sm:text-sm xs:text-sm text-tan rounded hover:text-yellow-200 hover:no-underline whitespace-no-wrap sm:mt-0 sm:ml-2">Eighth Street Taproom </a>
+			<a aria-label="Google Maps Link" href="http://maps.google.com/?q=801 New Hampshire St, Lawrence, KS, 66044" target="_blank" class="sm:text-sm xs:text-sm hover:no-underline whitespace-no-wrap py-1 text-tan rounded hover:text-yellow-200">801 New Hampshire Lawrence</a>
+			<a aria-label="Telephone Number Link" href="tel:+17858416918" class="sm:text-sm xs:text-sm whitespace-no-wrap text-tan hover:text-yellow-200 hover:no-underline">(785) 841-6918</a>
+		</div>
+		<div class="shadow-lg mt-2">
+			<iframe aria-label="Eighth Street Taproom Current Playlist on Spotify" src="https://open.spotify.com/embed/playlist/0eCwoY2jZKsLv9aCIc9V49" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+		</div>
 	</div>
-	<hr class="bg-gray-600" />
 	<div class="flex justify-center items-center">
-		<a href="https://www.facebook.com/eighthstreettaproom" target="_blank" class="mt-1 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2">
+		<a aria-label="Facebook Link" href="https://www.facebook.com/eighthstreettaproom" target="_blank" class="mt-1 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2">
 			<i class="fa fa-facebook-square" aria-hidden="true"></i>
 		</a>
-		<a href="https://twitter.com/eighthsttaproom?lang=en" target="_blank" class="mt-1 px-2 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2">
+		<a aria-label="Twitter Link" href="https://twitter.com/eighthsttaproom?lang=en" target="_blank" class="mt-1 px-2 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2">
 			<i class="fa fa-twitter-square" aria-hidden="true"></i>
 		</a>
-		<a href="https://www.instagram.com/eighthstreettaproom/?hl=en" target="_blank" class="mt-1 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2">
+		<a aria-label="Instagram Link" href="https://www.instagram.com/eighthstreettaproom/?hl=en" target="_blank" class="mt-1 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2">
 			<i class="fa fa-instagram" aria-hidden="true"></i>
 		</a>
+
+
 	</div>
 </footer>

@@ -1,13 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbSlideEvent, NgbSlideEventSource, NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+import { fadeInAnimation } from '../../shared/navigation/route-animations';
 
 @Component({
-  selector: 'app-archive-pics',
-  templateUrl: './archive-pics.component.html',
-  styleUrls: ['./archive-pics.component.css']
+    selector: 'app-archive-pics',
+    templateUrl: './archive-pics.component.html',
+    styleUrls: ['./archive-pics.component.css'],
+    animations: [fadeInAnimation],
+    host: { '[@fadeInAnimation]': '' }
 })
 export class ArchivePicsComponent implements OnInit {
-    images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
     showNavigationArrows = true;
     showNavigationIndicators = true;
     pauseOnHover = true;
@@ -15,9 +17,9 @@ export class ArchivePicsComponent implements OnInit {
     @ViewChild('mycarousel', { static: true }) carousel: NgbCarousel;
 
 
-    constructor() {      
+    constructor() {
     }
-    ngOnInit() {}
+    ngOnInit() { }
 
     startCarousel() {
         this.carousel.cycle();
