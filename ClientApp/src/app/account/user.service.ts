@@ -1,52 +1,70 @@
-
-import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestoreDocument } from '@angular/fire/firestore';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import * as firebase from 'firebase/app';
-import { Observable, of, BehaviorSubject } from 'rxjs';
-import { switchMap, take } from 'rxjs/operators';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { User } from './user';
+
+import { auth } from 'firebase/app';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore, AngularFirestoreDocument, DocumentData } from '@angular/fire/firestore';
+
+import { Observable, of } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+
+interface User {
+    uid: string;
+    email: string;
+    photoURL?: string;
+    displayName?: string;
+    isOwner?: false;
+}
 
 @Injectable({
-	providedIn: 'root'
+    providedIn: 'root'
 })
 export class UserService {
-	private eventAuthError = new BehaviorSubject<string>('');
-	eventAuthError$ = this.eventAuthError.asObservable();
+    user$: Observable<User>;
+    state_changed: EventEmitter<DocumentData> = new EventEmitter<DocumentData>();
 
-	newUser: any;
-	constructor(
-		public afAuth: AngularFireAuth,
-		private db: AngularFirestore,
-		private router: Router,
-	) { }
+    constructor(private afAuth: AngularFireAuth,
+        private afs: AngularFirestore,
+        private router: Router) {
+        this.user$ = this.afAuth.authState.pipe(
+            switchMap(user => {
+                if (user) {
+                    let userData = this.afs.doc<User>(`users/${user.uid}`);
+                    userData.get({
+                        source: "server"
+                    }).subscribe(doc => {
+                        this.state_changed.emit(doc.data());
+                    });
+                    return userData.valueChanges();
+                } else {
+                    return of(null);
+                }
+            })
+        );
+    };
 
-	createUser(user: { email: string; password: string; firstName: string; lastName: string; }) {
-		this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
-			.then(userCredentials => {
-				this.newUser = user;
-				userCredentials.user!.updateProfile({
-					displayName: user.firstName + ' ' + user.lastName
-				});
-				this.insertUserData(userCredentials)
-					.then(() => {
-						this.router.navigate(['/']);
-					});
-			})
-			.catch(error => {
-				this.eventAuthError.next(error);
-		})
-	}
+    async googleSignin() {
+        const provider = new auth.GoogleAuthProvider();
+        const credential = await this.afAuth.auth.signInWithPopup(provider);
+        return this.updateUserData(credential.user);
+    }
 
+    async signOut() {
+        await this.afAuth.auth.signOut();
+        this.state_changed.emit(null);
+        return this.router.navigate(['/']);
+    }
 
-	insertUserData(userCredential: firebase.auth.UserCredential) {
-		return this.db.doc(`users\${userCredential.user.uid}`).set({
-			email: this.newUser.email,
-			firstname: this.newUser.firstName,
-			lastname: this.newUser.lastName,
-			role: 'user'
-		})
-	}
+    updateUserData({ uid, email, displayName, photoURL }: User) {
+        const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${uid}`);
+
+        const data = {
+            uid,
+            email,
+            displayName,
+            photoURL
+        };
+
+        return userRef.set(data, { merge: true });
+    }
 }

@@ -123,6 +123,12 @@ svg {
 	background-color: #5d441c !important;
 	border-color: #5d441c !important;
 	color: #fff !important;
+	font-size: smaller !important;
+}
+
+.fc-right {
+	display: flex !important;
+	justify-content: center !important;
 }
 
 h2, th {

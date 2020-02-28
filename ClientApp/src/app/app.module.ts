@@ -6,13 +6,10 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { CalendarModule } from './calendar/calendar.module';
-import { AccordionModule } from 'ngx-bootstrap';
 import { AccountModule } from './account/account.module';
-import { FullCalendarModule } from '@fullcalendar/angular';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ArchivesModule } from './archives/archives.module';
 
@@ -25,9 +22,7 @@ import { ArchivesModule } from './archives/archives.module';
 		AngularFireModule.initializeApp(environment.firebaseConfig),
 		AngularFirestoreModule,
 		AngularFireAuthModule,
-		AngularFireDatabaseModule,
 		ArchivesModule,
-		AccordionModule,
 		AccountModule,
 		BrowserAnimationsModule,
 		BrowserModule,

@@ -318,7 +318,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div class=\"mt-12 auth-container\" id=\"firebaseui-auth-container\"></div>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"auth.user$ | async as user; else login\" class=\"mt-4 w-full bg-gray-900 p-10 text-tan rounded shadow-2 opacity-75\">\r\n\t{{user | json }}\r\n\t<hr />\r\n\t<button class=\"button\" (click)=\"auth.signOut()\">Sign Out</button>\r\n</div>\r\n\r\n<ng-template #login>\r\n\t<div class=\"mt-4 w-full bg-gray-900 p-10 text-tan rounded shadow-2 opacity-75\">\r\n\t\t<button class=\"button\" (click)=\"auth.googleSignin()\">Sign In</button>\r\n\t</div>\r\n</ng-template>\r\n");
 
 /***/ }),
 
@@ -344,7 +344,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>archive-pics works!</p>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"py-6 container w-full\">\r\n\t<div class=\"w-full\">\r\n\t\t<ngb-carousel #mycarousel\r\n\t\t\t\t\t  [showNavigationArrows]=\"true\"\r\n\t\t\t\t\t  [showNavigationIndicators]=\"true\"\r\n\t\t\t\t\t  interval=\"10000\"\r\n\t\t\t\t\t  [keyboard]=\"true\"\r\n\t\t\t\t\t  [pauseOnHover]=\"true\"\r\n\t\t\t\t\t  [wrap]=\"true\"\r\n\t\t\t\t\t  [activeId]=\"'slideTwo'\"\r\n\t\t\t\t\t  (slide)=\"onSlide($event)\">\r\n\t\t\t<ng-template ngbSlide>\r\n\t\t\t\t<div class=\"picsum-img-wrapper\">\r\n\t\t\t\t\t<img src=\"../../assets/images/IMG_0029.jpg\" alt=\"Album Cover Closeup\">\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"carousel-caption\">\r\n\t\t\t\t\t<h3>Album Cover Closeup</h3>\r\n\t\t\t\t\t<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>\r\n\t\t\t\t</div>\r\n\t\t\t</ng-template>\r\n\t\t\t<ng-template ngbSlide>\r\n\t\t\t\t<div class=\"picsum-img-wrapper\">\r\n\t\t\t\t\t<img src=\"../../assets/images/IMG_0030.jpg\" alt=\"Taproom\">\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"carousel-caption\">\r\n\t\t\t\t\t<h3>Taproom</h3>\r\n\t\t\t\t\t<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>\r\n\t\t\t\t</div>\r\n\t\t\t</ng-template>\r\n\t\t\t<ng-template ngbSlide>\r\n\t\t\t\t<div class=\"picsum-img-wrapper\">\r\n\t\t\t\t\t<img src=\"../../assets/images/IMG_0031.jpg\" alt=\"Taproom Exterior\">\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"carousel-caption\">\r\n\t\t\t\t\t<h3>Taproom Exterior</h3>\r\n\t\t\t\t\t<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>\r\n\t\t\t\t</div>\r\n\t\t\t</ng-template>\r\n\t\t</ngb-carousel>\r\n\t\t<div class=\"flex justify-center text-tan my-4\">\r\n\t\t\t<button (click)=\"goToSlide('slideThree')\" class=\"fa fa-pause\"></button>\r\n\t\t\t<button (click)=\"pauseCarousel()\" class=\"fa fa-play mx-4\"></button>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/archives/image-upload/image-upload.component.html":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/archives/image-upload/image-upload.component.html ***!
+  \*********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<input style=\"display: none\"\r\n\t   type=\"file\" (change)=\"onFileChanged($event)\"\r\n\t   #fileInput>\r\n<button (click)=\"fileInput.click()\">Select File</button>\r\n<button (click)=\"onUpload()\">Upload</button>\r\n");
 
 /***/ }),
 
@@ -370,7 +383,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container shadow-lg py-10\">\r\n\t<div class=\"bg-gray-900 p-4 opacity-75 rounded shadow-1\" id=\"full-calendar\"></div>\r\n</div>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container my-4\">\r\n\t<div class=\"bg-gray-900 p-4 opacity-75 rounded shadow-lg\" id=\"full-calendar\"></div>\r\n</div>\r\n\r\n");
 
 /***/ }),
 
@@ -409,7 +422,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\t\t<!--NAVBAR-->\r\n<header class=\"bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3 z-50 fixed w-full\">\r\n\t<div class=\"flex items-center justify-between py-3 sm:p-0\">\r\n\t\t<div class=\"xl:pl-46 lg:mr-20 pl-20 md:ml-10 sm:pl-2\">\r\n\t\t\t<a href=\"#\" class=\"uppercase text-tan\">\r\n\t\t\t\t<p>Eighth Street Taproom</p>\r\n\t\t\t\t<p class=\"text-sm\">801 New Hampshire</p>\r\n\t\t\t\t<p class=\"text-sm\">Lawrence, Kansas 66044</p>\r\n\t\t\t</a>\r\n\r\n\t\t</div>\r\n\t\t<div class=\"sm:hidden\">\r\n\t\t\t<button (click)=\"isOpen = !isOpen\" type=\"button\" class=\"block text-tan hover:text-yellow-200 focus:text-yellow-200 focus:outline-none mr-4\">\r\n\t\t\t\t<svg class=\"h-6 w-6 fill-current\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t<path v-if=\"isOpen\" fill-rule=\"evenodd\" d=\"M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z\" />\r\n\t\t\t\t\t<path v-if=\"!isOpen\" fill-rule=\"evenodd\" d=\"M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z\" />\r\n\t\t\t\t</svg>\r\n\t\t\t</button>\r\n\t\t</div>\r\n\t</div>\r\n\t<nav [ngClass]=\"isOpen ? 'block' : 'hidden'\" class=\"xl:mr-56 lg:mr-20 md:mr-10 sm:mr-4 pt-2 pb-4 sm:flex sm:p-0\">\r\n\t\t<a [routerLink]=\"['/']\" [routerLinkActive]=\"['active-link']\"\r\n\t\t   [routerLinkActiveOptions]=\"{exact:true}\" class=\"block px-2 py-1 text-tan rounded hover:text-yellow-200\">Calendar</a>\r\n\t\t<a [routerLink]=\"['/archives']\" [routerLinkActive]=\"['active-link']\" class=\"mt-1 block px-2 py-1 text-tan rounded hover:text-yellow-200 sm:mt-0 sm:ml-2\">Archives</a>\r\n\t\t<a [routerLink]=\"['/login']\" [routerLinkActive]=\"['active-link']\" class=\"mt-1 block px-2 py-1 text-tan rounded hover:text-yellow-200 sm:mt-0 sm:ml-2\">Login</a>\r\n\t</nav>\r\n</header>\r\n\r\n\r\n<!--SIDEBAR-->\r\n<!--<nav id=\"sidebar\" class=\"bg-white h-screen w-60 shadow-8 md:shadow-2 flex flex-col justify-between fixed z-40\"\r\n\t [ngClass]=\"{'hide' : !showSidebar}\">\r\n\t<div>\r\n\t\t<div class=\"py-10\">\r\n\t\t\t<h2 class=\"text-center\">SSO</h2>\r\n\t\t</div>\r\n\t\t<div class=\"flex justify-between items-center ml-1\">\r\n\t\t\t<ul (click)=\"toggleSidebar(false)\">\r\n\t\t\t\t<li>\r\n\r\n\t\t\t\t</li>\r\n\t\t\t\t<li>\r\n\t\t\t\t\t<a [routerLink]=\"['/a']\" [routerLinkActive]=\"['active-link']\">\r\n\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t\t\t<path fill=\"none\" d=\"M0 0h24v24H0V0z\" />\r\n\t\t\t\t\t\t\t<path class=\"fill-current\"\r\n\t\t\t\t\t\t\t\t  d=\"M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z\" />\r\n\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\tApplications\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li>\r\n\t\t\t\t\t<a [routerLink]=\"['/b']\" [routerLinkActive]=\"['active-link']\">\r\n\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t\t\t<path fill=\"none\" d=\"M0 0h24v24H0V0z\" />\r\n\t\t\t\t\t\t\t<path class=\"fill-current\"\r\n\t\t\t\t\t\t\t\t  d=\"M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM6 10h2v2H6zm0 4h8v2H6zm10 0h2v2h-2zm-6-4h8v2h-8z\" />\r\n\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\tStatus\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li>\r\n\t\t\t\t\t<a [routerLink]=\"['/c']\" [routerLinkActive]=\"['active-link']\">\r\n\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t\t\t<path fill=\"none\" d=\"M0 0h24v24H0V0z\" />\r\n\t\t\t\t\t\t\t<path class=\"fill-current\"\r\n\t\t\t\t\t\t\t\t  d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z\" />\r\n\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\tResource\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li>\r\n\t\t\t\t\t<a [routerLink]=\"['/d']\" [routerLinkActive]=\"['active-link']\">\r\n\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t\t\t<path fill=\"none\" d=\"M0 0h24v24H0V0z\" />\r\n\t\t\t\t\t\t\t<path class=\"fill-current\"\r\n\t\t\t\t\t\t\t\t  d=\"M11 23.59v-3.6c-5.01-.26-9-4.42-9-9.49C2 5.26 6.26 1 11.5 1S21 5.26 21 10.5c0 4.95-3.44 9.93-8.57 12.4l-1.43.69zM11.5 3C7.36 3 4 6.36 4 10.5S7.36 18 11.5 18H13v2.3c3.64-2.3 6-6.08 6-9.8C19 6.36 15.64 3 11.5 3zm-1 11.5h2v2h-2zm2-1.5h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z\" />\r\n\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\tSupport\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>-->\r\n<!--<li *ngIf=\"isAuthorized(['Admin'])\">\r\n\t<a [routerLink]=\"['/account/user']\" [routerLinkActive]=\"['active-link']\">\r\n\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\r\n\t\t\t<path fill=\"none\" d=\"M0 0h24v24H0V0z\" />\r\n\t\t\t<path class=\"fill-current\"\r\n\t\t\t\t  d=\"M9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm0 6.75c-2.34 0-7 1.17-7 3.5V18c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zm11.7-3.19c1.16.84 1.96 1.96 1.96 3.44V19h3c.55 0 1-.45 1-1v-.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z\" />\r\n\t\t</svg>\r\n\t\tUsers\r\n\t</a>\r\n</li>-->\r\n<!--</ul>\r\n\t</div>\r\n</div>-->\r\n<!--<div class=\"ml-1\" *ngIf=\"isLoggedIn; else notLoggedIn\">\r\n\t<div class=\"fade\" [ngClass]=\"showExpanded ? 'opacity-100' : 'opacity-0 pointer-events-none'\">\r\n\t\t<ul (click)=\"toggleSidebar(false)\">\r\n\t\t\t<li>\r\n\t\t\t\t<a [routerLink]=\"['/account']\" [routerLinkActive]=\"['active-link']\"\r\n\t\t\t\t   [routerLinkActiveOptions]=\"{exact:true}\">\r\n\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t\t<path fill=\"none\" d=\"M0 0h24v24H0V0z\" />\r\n\t\t\t\t\t\t<path class=\"fill-current\"\r\n\t\t\t\t\t\t\t  d=\"M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.22 0 .41.1.55.25.12.13.2.31.2.5 0 .41-.34.75-.75.75s-.75-.34-.75-.75c0-.19.08-.37.2-.5.14-.15.33-.25.55-.25zM19 19H5V5h14v14zM12 6c-1.65 0-3 1.35-3 3s1.35 3 3 3 3-1.35 3-3-1.35-3-3-3zm0 4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-6 6.47V18h12v-1.53c0-2.5-3.97-3.58-6-3.58s-6 1.07-6 3.58zM8.31 16c.69-.56 2.38-1.12 3.69-1.12s3.01.56 3.69 1.12H8.31z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t\tAccount\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li>\r\n\t\t\t\t<a [routerLink]=\"['/account/login']\" (click)=\"logout(); toggleSidebar(false);\">\r\n\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t\t<path fill=\"none\" d=\"M0 0h24v24H0V0z\" />\r\n\t\t\t\t\t\t<path class=\"fill-current\"\r\n\t\t\t\t\t\t\t  d=\"M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t\tLogout\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t</ul>\r\n\t</div>\r\n\t<a class=\"flex justify-around py-5\" (click)=\"toggleExpanded()\">\r\n\t\t<span>\r\n\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t<path fill=\"none\" d=\"M0 0h24v24H0V0z\" />\r\n\t\t\t\t<path class=\"fill-current\"\r\n\t\t\t\t\t  d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z\" />\r\n\t\t\t</svg>\r\n\t\t\t{{displayName}}\r\n\t\t</span>\r\n\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"\r\n\t\t\t [ngClass]=\"showExpanded ? 'rotate-180' : ''\">\r\n\t\t\t<path fill=\"none\" d=\"M0 0h24v24H0V0z\" />\r\n\t\t\t<path class=\"fill-current\" d=\"M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z\" />\r\n\t\t</svg>\r\n\t</a>\r\n</div>\r\n<ng-template #notLoggedIn>\r\n\t<a class=\"flex justify-around py-5\" [routerLink]=\"['/account/login']\" (click)=\"toggleSidebar(false)\">\r\n\t\t<span>\r\n\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t<path fill=\"none\" d=\"M0 0h24v24H0V0z\" />\r\n\t\t\t\t<path class=\"fill-current\"\r\n\t\t\t\t\t  d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z\" />\r\n\t\t\t</svg>\r\n\t\t\tSign In\r\n\t\t</span>\r\n\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\r\n\t\t\t<path fill=\"none\" d=\"M0 0h24v24H0V0z\" />\r\n\t\t</svg>\r\n\t</a>\r\n</ng-template>-->\r\n<!--</nav>\r\n</div>-->\r\n<!--CONTENT-->\r\n<main id=\"content\" class=\"pt-20\">\r\n\t<ng-content></ng-content>\r\n</main>\r\n\r\n<footer class=\"bg-gray-900 px-4 py-4 z-50 relative w-full bottom-0 text-tan\">\r\n\t<div class=\"border-l-0 border-r-0 border border-gray-600 w-full flex justify-center items-center\">\r\n\t\t<a href=\"#\" class=\"mt-1 block py-1 text-tan rounded hover:text-yellow-200 sm:mt-0 sm:ml-2\">Eighth Street Taproom • </a>\r\n\t\t<a href=\"http://maps.google.com/?q=801 New Hampshire St, Lawrence, KS, 66044\" target=\"_blank\" class=\"mt-1 block py-1 text-tan rounded hover:text-yellow-200 sm:mt-0 sm:ml-2\">801 New Hampshire, Lawrence, KS 66044 • </a>\r\n\t\t<a href=\"tel:+17858416918\" class=\"mt-1 block py-1 text-tan rounded hover:text-yellow-200 sm:mt-0 sm:ml-2\">(785) 841-6918</a>\r\n\t</div>\r\n\t<div class=\"flex justify-center items-center\">\r\n\t\t<a href=\"#\" class=\"mt-1 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2\">\r\n\t\t\t<i class=\"fa fa-facebook-square\" aria-hidden=\"true\"></i>\r\n\t\t</a>\r\n\t\t<a href=\"#\" class=\"mt-1 px-2 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2\">\r\n\t\t\t<i class=\"fa fa-twitter-square\" aria-hidden=\"true\"></i>\r\n\t\t</a>\r\n\t\t<a href=\"#\" class=\"mt-1 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2\">\r\n\t\t\t<i class=\"fa fa-instagram\" aria-hidden=\"true\"></i>\r\n\t\t</a>\r\n\t\t<a href=\"#\" class=\"mt-1 block pl-2 py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2\">\r\n\t\t\t<i class=\"fa fa-spotify\" aria-hidden=\"true\"></i>\r\n\t\t</a>\r\n\t</div>\r\n</footer>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--NAVBAR-->\r\n<header class=\"bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3 z-50 fixed w-full\">\r\n\t<div class=\"flex items-center justify-between py-3 sm:p-0\">\r\n\t\t<div class=\"xl:pl-10 lg:mr-10 pl-20 md:ml-10 sm:pl-2 xs:pl-2\">\r\n\t\t\t<a [routerLink]=\"['/']\" [routerLinkActive]=\"['active-link']\"\r\n\t\t\t   [routerLinkActiveOptions]=\"{exact:true}\" class=\"uppercase text-tan hover:text-yellow-200 hover:no-underline\">\r\n\t\t\t\t<p>Eighth Street Taproom</p>\r\n\t\t\t\t<p class=\"text-sm\">801 New Hampshire</p>\r\n\t\t\t\t<p class=\"text-sm\">Lawrence, Kansas 66044</p>\r\n\t\t\t</a>\r\n\r\n\t\t</div>\r\n\t\t<div class=\"sm:hidden\">\r\n\t\t\t<button (click)=\"isOpen = !isOpen\" type=\"button\" class=\"block text-tan hover:text-yellow-200 focus:text-yellow-200 focus:outline-none mr-16\">\r\n\t\t\t\t<svg class=\"h-6 w-6 fill-current\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t<path v-if=\"isOpen\" fill-rule=\"evenodd\" d=\"M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z\" />\r\n\t\t\t\t\t<path v-if=\"!isOpen\" fill-rule=\"evenodd\" d=\"M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z\" />\r\n\t\t\t\t</svg>\r\n\t\t\t</button>\r\n\t\t</div>\r\n\t</div>\r\n\t<nav [ngClass]=\"isOpen ? 'block' : 'hidden'\" class=\"sm:flex sm:p-0\">\r\n\t\t<div class=\"xl:flex xl:justify-end lg:flex lg:justify-end md:flex md:justify-end items-center xl:mr-10 sm:text-sm xs:text-sm\">\r\n\t\t\t<div>\r\n\t\t\t\t<a [routerLink]=\"['/']\" [routerLinkActive]=\"['active-link']\"\r\n\t\t\t\t   [routerLinkActiveOptions]=\"{exact:true}\" class=\"block px-2 py-1 text-tan hover:text-yellow-200 hover:no-underline\">Calendar</a>\r\n\t\t\t</div>\r\n\t\t\t<div>\r\n\t\t\t\t<a [routerLink]=\"['/archives']\" [routerLinkActive]=\"['active-link']\" class=\"block px-2 py-1 text-tan hover:text-yellow-200 sm:mt-0 sm:ml-2 hover:no-underline\">Archives</a>\r\n\t\t\t</div>\r\n\t\t\t<div *ngIf=\"auth.user$ | async as user; else login\">\r\n\t\t\t\t<button class=\"block uppercase flex items-center xl:px-4 lg:px-4 md:px-4 sm:px-2 xs:px-2 py-1 text-tan hover:text-yellow-200 sm:mt-0 sm:ml-2 focus:outline-none\" (click)=\"auth.signOut()\">\r\n\t\t\t\t\t<img class=\"w-8 h-8 rounded-full\" src=\"{{user.photoURL}}\" />\r\n\t\t\t\t\t{{user.displayName}}\r\n\t\t\t\t</button>\r\n\t\t\t</div>\r\n\t\t\t<ng-template #login>\r\n\t\t\t\t<button class=\"uppercase block px-2 py-1 text-tan hover:text-yellow-200 focus:outline-none\" (click)=\"auth.googleSignin()\">Sign In</button>\r\n\t\t\t</ng-template>\r\n\t\t</div>\r\n\t</nav>\r\n</header>\r\n\r\n<!--CONTENT-->\r\n<main id=\"content\" class=\"pt-30\">\r\n\t<div class=\"xl:flex xl:justify-around lg:flex lg:justify-around md:\">\r\n\t\t<div>\r\n\t\t\t<ng-content></ng-content>\r\n\t\t</div>\r\n\t\t<div>\r\n\t\t\t<iframe class=\"py-4 xl:ml-20 lg:ml-20 md:ml-80 sm:ml-36 xs: ml-10\" src=\"https://open.spotify.com/embed/playlist/0eCwoY2jZKsLv9aCIc9V49\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>\r\n\t\t</div>\r\n\t</div>\r\n</main>\r\n\r\n<!--FOOTER-->\r\n<footer class=\"bg-gray-900 px-4 py-1 z-50 relative w-full bottom-0 text-tan\">\r\n\t<div class=\"w-full flex justify-center items-center sm:flex sm:flex-col sm:justify-center xs:flex xs:flex-col xs:justify-center\">\r\n\t\t<a [routerLink]=\"['/']\" [routerLinkActive]=\"['active-link']\"\r\n\t\t\t   [routerLinkActiveOptions]=\"{exact:true}\" class=\"sm:text-sm xs:text-sm mt-1 py-1 text-tan rounded hover:text-yellow-200 hover:no-underline whitespace-no-wrap sm:mt-0 sm:ml-2\">Eighth Street Taproom </a>\r\n\t\t<a href=\"http://maps.google.com/?q=801 New Hampshire St, Lawrence, KS, 66044\" target=\"_blank\" class=\"sm:text-sm xs:text-sm mt-1 hover:no-underline whitespace-no-wrap py-1 text-tan rounded hover:text-yellow-200 sm:mt-0 sm:ml-2\">801 New Hampshire, Lawrence, KS 66044 </a>\r\n\t\t<a href=\"tel:+17858416918\" class=\"sm:text-sm xs:text-sm whitespace-no-wrap mt-1 py-1 text-tan rounded hover:text-yellow-200 hover:no-underline sm:mt-0 sm:ml-2\">(785) 841-6918</a>\r\n\t</div>\r\n\t<hr class=\"bg-gray-600\" />\r\n\t<div class=\"flex justify-center items-center\">\r\n\t\t<a href=\"https://www.facebook.com/eighthstreettaproom\" target=\"_blank\" class=\"mt-1 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2\">\r\n\t\t\t<i class=\"fa fa-facebook-square\" aria-hidden=\"true\"></i>\r\n\t\t</a>\r\n\t\t<a href=\"https://twitter.com/eighthsttaproom?lang=en\" target=\"_blank\" class=\"mt-1 px-2 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2\">\r\n\t\t\t<i class=\"fa fa-twitter-square\" aria-hidden=\"true\"></i>\r\n\t\t</a>\r\n\t\t<a href=\"https://www.instagram.com/eighthstreettaproom/?hl=en\" target=\"_blank\" class=\"mt-1 block py-1 rounded text-gray-600 hover:text-yellow-200 sm:mt-0 sm:ml-2\">\r\n\t\t\t<i class=\"fa fa-instagram\" aria-hidden=\"true\"></i>\r\n\t\t</a>\r\n\t</div>\r\n</footer>\r\n");
 
 /***/ }),
 
@@ -687,7 +700,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] }
+    { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
 ];
 let AccountRoutingModule = class AccountRoutingModule {
 };
@@ -752,6 +765,55 @@ AccountModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
+/***/ "./src/app/account/auth.guard.ts":
+/*!***************************************!*\
+  !*** ./src/app/account/auth.guard.ts ***!
+  \***************************************/
+/*! exports provided: AuthGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user.service */ "./src/app/account/user.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+let AuthGuard = class AuthGuard {
+    constructor(auth, router) {
+        this.auth = auth;
+        this.router = router;
+    }
+    canActivate(next, state) {
+        return this.auth.user$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(user => !!user), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(loggedIn => {
+            if (!loggedIn) {
+                console.log('Access denied');
+                this.router.navigate(['/']);
+            }
+        }));
+    }
+};
+AuthGuard.ctorParameters = () => [
+    { type: _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
+AuthGuard = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    }),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+], AuthGuard);
+
+
+
+/***/ }),
+
 /***/ "./src/app/account/login/login.component.scss":
 /*!****************************************************!*\
   !*** ./src/app/account/login/login.component.scss ***!
@@ -777,43 +839,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var firebaseui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebaseui */ "./node_modules/firebaseui/dist/esm.js");
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist/index.cjs.js");
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/auth/es2015/index.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-
-
-
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user.service */ "./src/app/account/user.service.ts");
 
 
 
 let LoginComponent = class LoginComponent {
-    constructor(afAuth, router) {
-        this.afAuth = afAuth;
-        this.router = router;
+    constructor(auth) {
+        this.auth = auth;
     }
     ngOnInit() {
-        const uiConfig = {
-            signInSuccessUrl: '/calendar',
-            signInOptions: [
-                {
-                    provider: firebase__WEBPACK_IMPORTED_MODULE_3__["auth"].GoogleAuthProvider.PROVIDER_ID,
-                    authMethod: 'https://accounts.google.com'
-                }
-            ],
-            tosUrl: 'https://ajonp.com/tos',
-            privacyPolicyUrl: function () {
-                window.location.assign('https://ajonp.com/privacy');
-            }
-        };
-        this.ui = new firebaseui__WEBPACK_IMPORTED_MODULE_2__["auth"].AuthUI(this.afAuth.auth);
-        this.ui.start('#firebaseui-auth-container', uiConfig);
     }
 };
 LoginComponent.ctorParameters = () => [
-    { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    { type: _user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] }
 ];
 LoginComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -821,7 +859,7 @@ LoginComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/account/login/login.component.html")).default,
         styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./login.component.scss */ "./src/app/account/login/login.component.scss")).default]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]])
 ], LoginComponent);
 
 
@@ -840,10 +878,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserService", function() { return UserService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/auth/es2015/index.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/auth/es2015/index.js");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/firestore/es2015/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
 
 
 
@@ -851,50 +894,64 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let UserService = class UserService {
-    constructor(afAuth, db, router) {
+    constructor(afAuth, afs, router) {
         this.afAuth = afAuth;
-        this.db = db;
+        this.afs = afs;
         this.router = router;
-        this.eventAuthError = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"]('');
-        this.eventAuthError$ = this.eventAuthError.asObservable();
+        this.state_changed = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.user$ = this.afAuth.authState.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["switchMap"])(user => {
+            if (user) {
+                let userData = this.afs.doc(`users/${user.uid}`);
+                userData.get({
+                    source: "server"
+                }).subscribe(doc => {
+                    this.state_changed.emit(doc.data());
+                });
+                return userData.valueChanges();
+            }
+            else {
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["of"])(null);
+            }
+        }));
     }
-    createUser(user) {
-        this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
-            .then(userCredentials => {
-            this.newUser = user;
-            userCredentials.user.updateProfile({
-                displayName: user.firstName + ' ' + user.lastName
-            });
-            this.insertUserData(userCredentials)
-                .then(() => {
-                this.router.navigate(['/']);
-            });
-        })
-            .catch(error => {
-            this.eventAuthError.next(error);
+    ;
+    googleSignin() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const provider = new firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"].GoogleAuthProvider();
+            const credential = yield this.afAuth.auth.signInWithPopup(provider);
+            return this.updateUserData(credential.user);
         });
     }
-    insertUserData(userCredential) {
-        return this.db.doc(`users\${userCredential.user.uid}`).set({
-            email: this.newUser.email,
-            firstname: this.newUser.firstName,
-            lastname: this.newUser.lastName,
-            role: 'user'
+    signOut() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            yield this.afAuth.auth.signOut();
+            this.state_changed.emit(null);
+            return this.router.navigate(['/']);
         });
+    }
+    updateUserData({ uid, email, displayName, photoURL }) {
+        const userRef = this.afs.doc(`users/${uid}`);
+        const data = {
+            uid,
+            email,
+            displayName,
+            photoURL
+        };
+        return userRef.set(data, { merge: true });
     }
 };
 UserService.ctorParameters = () => [
-    { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"] },
+    { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"] },
     { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__["AngularFirestore"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
 ];
 UserService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
         providedIn: 'root'
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"],
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"],
         _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__["AngularFirestore"],
-        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
 ], UserService);
 
 
@@ -1000,16 +1057,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared/shared.module */ "./src/app/shared/shared.module.ts");
 /* harmony import */ var _calendar_calendar_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./calendar/calendar.module */ "./src/app/calendar/calendar.module.ts");
-/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/esm5/ngx-bootstrap.js");
-/* harmony import */ var _account_account_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./account/account.module */ "./src/app/account/account.module.ts");
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/__ivy_ngcc__/es2015/index.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/firestore/es2015/index.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/__ivy_ngcc__/database/es2015/index.js");
-/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/auth/es2015/index.js");
-/* harmony import */ var _archives_archives_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./archives/archives.module */ "./src/app/archives/archives.module.ts");
-
-
+/* harmony import */ var _account_account_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./account/account.module */ "./src/app/account/account.module.ts");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/__ivy_ngcc__/es2015/index.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/firestore/es2015/index.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/auth/es2015/index.js");
+/* harmony import */ var _archives_archives_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./archives/archives.module */ "./src/app/archives/archives.module.ts");
 
 
 
@@ -1033,13 +1086,11 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
         ],
         imports: [
-            _angular_fire__WEBPACK_IMPORTED_MODULE_11__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_12__["environment"].firebaseConfig),
-            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_13__["AngularFirestoreModule"],
-            _angular_fire_auth__WEBPACK_IMPORTED_MODULE_15__["AngularFireAuthModule"],
-            _angular_fire_database__WEBPACK_IMPORTED_MODULE_14__["AngularFireDatabaseModule"],
-            _archives_archives_module__WEBPACK_IMPORTED_MODULE_16__["ArchivesModule"],
-            ngx_bootstrap__WEBPACK_IMPORTED_MODULE_9__["AccordionModule"],
-            _account_account_module__WEBPACK_IMPORTED_MODULE_10__["AccountModule"],
+            _angular_fire__WEBPACK_IMPORTED_MODULE_10__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_11__["environment"].firebaseConfig),
+            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_12__["AngularFirestoreModule"],
+            _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__["AngularFireAuthModule"],
+            _archives_archives_module__WEBPACK_IMPORTED_MODULE_14__["ArchivesModule"],
+            _account_account_module__WEBPACK_IMPORTED_MODULE_9__["AccountModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _calendar_calendar_module__WEBPACK_IMPORTED_MODULE_8__["CalendarModule"],
@@ -1082,13 +1133,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArchivePicsComponent", function() { return ArchivePicsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+
 
 
 let ArchivePicsComponent = class ArchivePicsComponent {
-    constructor() { }
-    ngOnInit() {
+    constructor() {
+        this.images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+        this.showNavigationArrows = true;
+        this.showNavigationIndicators = true;
+        this.pauseOnHover = true;
+    }
+    ngOnInit() { }
+    startCarousel() {
+        this.carousel.cycle();
+    }
+    pauseCarousel() {
+        this.carousel.pause();
+    }
+    moveNext() {
+        this.carousel.next();
+    }
+    getPrev() {
+        this.carousel.prev();
+    }
+    goToSlide(slide) {
+        this.carousel.select(slide);
     }
 };
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('mycarousel', { static: true }),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbCarousel"])
+], ArchivePicsComponent.prototype, "carousel", void 0);
 ArchivePicsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-archive-pics',
@@ -1097,6 +1173,40 @@ ArchivePicsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])(
     }),
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
 ], ArchivePicsComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/archives/archives-routing.module.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/archives/archives-routing.module.ts ***!
+  \*****************************************************/
+/*! exports provided: ArchivesRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArchivesRoutingModule", function() { return ArchivesRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _archive_pics_archive_pics_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./archive-pics/archive-pics.component */ "./src/app/archives/archive-pics/archive-pics.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+
+
+const routes = [
+    { path: 'archives', component: _archive_pics_archive_pics_component__WEBPACK_IMPORTED_MODULE_2__["ArchivePicsComponent"] }
+];
+let ArchivesRoutingModule = class ArchivesRoutingModule {
+};
+ArchivesRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+    })
+], ArchivesRoutingModule);
 
 
 
@@ -1117,12 +1227,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/__ivy_ngcc__/es2015/index.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/firestore/es2015/index.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/__ivy_ngcc__/database/es2015/index.js");
-/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
-/* harmony import */ var _archive_pics_archive_pics_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./archive-pics/archive-pics.component */ "./src/app/archives/archive-pics/archive-pics.component.ts");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _archive_pics_archive_pics_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./archive-pics/archive-pics.component */ "./src/app/archives/archive-pics/archive-pics.component.ts");
+/* harmony import */ var _image_upload_image_upload_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./image-upload/image-upload.component */ "./src/app/archives/image-upload/image-upload.component.ts");
+/* harmony import */ var _archives_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./archives-routing.module */ "./src/app/archives/archives-routing.module.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
 
 
 
@@ -1139,20 +1249,72 @@ let ArchivesModule = class ArchivesModule {
 ArchivesModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
-            _archive_pics_archive_pics_component__WEBPACK_IMPORTED_MODULE_10__["ArchivePicsComponent"]
+            _archive_pics_archive_pics_component__WEBPACK_IMPORTED_MODULE_6__["ArchivePicsComponent"],
+            _image_upload_image_upload_component__WEBPACK_IMPORTED_MODULE_7__["ImageUploadComponent"]
+        ],
+        exports: [
+            _archive_pics_archive_pics_component__WEBPACK_IMPORTED_MODULE_6__["ArchivePicsComponent"]
         ],
         imports: [
-            _angular_fire__WEBPACK_IMPORTED_MODULE_5__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_6__["environment"].firebaseConfig),
-            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_7__["AngularFirestoreModule"],
-            _angular_fire_database__WEBPACK_IMPORTED_MODULE_8__["AngularFireDatabaseModule"],
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__["BrowserModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
+            _archives_routing_module__WEBPACK_IMPORTED_MODULE_8__["ArchivesRoutingModule"],
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-            _shared_shared_module__WEBPACK_IMPORTED_MODULE_9__["SharedModule"]
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["NgbModule"],
+            _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"]
         ],
-        providers: []
+        bootstrap: [
+            _archive_pics_archive_pics_component__WEBPACK_IMPORTED_MODULE_6__["ArchivePicsComponent"]
+        ]
     })
 ], ArchivesModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/archives/image-upload/image-upload.component.css":
+/*!******************************************************************!*\
+  !*** ./src/app/archives/image-upload/image-upload.component.css ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FyY2hpdmVzL2ltYWdlLXVwbG9hZC9pbWFnZS11cGxvYWQuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/archives/image-upload/image-upload.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/archives/image-upload/image-upload.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: ImageUploadComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageUploadComponent", function() { return ImageUploadComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+let ImageUploadComponent = class ImageUploadComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+ImageUploadComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-image-upload',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./image-upload.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/archives/image-upload/image-upload.component.html")).default,
+        changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./image-upload.component.css */ "./src/app/archives/image-upload/image-upload.component.css")).default]
+    }),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+], ImageUploadComponent);
 
 
 
@@ -1353,6 +1515,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_modal_services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/modal/_services */ "./src/app/shared/modal/_services/index.ts");
 /* harmony import */ var _add_event_add_event_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../add-event/add-event.component */ "./src/app/calendar/add-event/add-event.component.ts");
 /* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../_services */ "./src/app/calendar/_services/index.ts");
+/* harmony import */ var _account_user_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../account/user.service */ "./src/app/account/user.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 
 
 
@@ -1362,56 +1526,60 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 let CalendarFormComponent = class CalendarFormComponent {
-    constructor(modalService, calendarService) {
+    constructor(modalService, calendarService, auth) {
         this.modalService = modalService;
         this.calendarService = calendarService;
+        this.auth = auth;
     }
     ngOnInit() {
-        var calendarDiv = document.getElementById('full-calendar');
-        this.calendar = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_5__["Calendar"](calendarDiv, {
-            buttonText: {
-                today: 'TODAY'
-            },
-            customButtons: {
-                event: {
-                    text: 'EVENT',
-                    click: () => {
-                        //if user is authenticated
-                        if (true) {
+        this.calanderDiv = document.getElementById('full-calendar');
+        this.auth.state_changed.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["startWith"])(null)).subscribe(userData => {
+            if (this.calendar)
+                this.calendar.destroy();
+            console.log(userData);
+            this.calendar = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_5__["Calendar"](this.calanderDiv, {
+                buttonText: {
+                    today: 'TODAY'
+                },
+                customButtons: (userData && userData.isOwner) ? {
+                    event: {
+                        text: '+',
+                        click: () => {
                             this.modalService.show(_add_event_add_event_component__WEBPACK_IMPORTED_MODULE_7__["AddEventComponent"], { title: 'Add an Event' });
                         }
                     }
-                }
-            },
-            events: (fetchInfo, successCallback) => {
-                this.calendarService.getEvents(fetchInfo, successCallback);
-            },
-            eventBackgroundColor: '#507169',
-            eventBorderColor: '#507169',
-            eventTextColor: '#e2c7ac',
-            displayEventTime: false,
-            header: {
-                left: 'event',
-                center: 'title',
-                right: 'prev, today, next'
-            },
-            height: 'auto',
-            plugins: [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_4__["default"], _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_3__["default"]],
-            selectable: true,
+                } : {},
+                events: (fetchInfo, successCallback) => {
+                    this.calendarService.getEvents(fetchInfo, successCallback);
+                },
+                eventBackgroundColor: '#507169',
+                eventBorderColor: '#507169',
+                eventTextColor: '#e2c7ac',
+                displayEventTime: false,
+                header: {
+                    left: 'event',
+                    center: 'title',
+                    right: 'prev, today, next'
+                },
+                height: 'auto',
+                plugins: [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_4__["default"], _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_3__["default"]],
+                selectable: true,
+            });
+            this.calendar.render();
         });
         this.calendarService.refreshCalendar().subscribe(() => {
             var _a;
             (_a = this.calendar) === null || _a === void 0 ? void 0 : _a.refetchEvents();
         });
-        this.calendar.render();
-        var eventButtons = document.getElementsByClassName('fc-event-button');
-        eventButtons[0].innerHTML = "<icon class='fa fa-plus'></icon>";
     }
 };
 CalendarFormComponent.ctorParameters = () => [
     { type: _shared_modal_services__WEBPACK_IMPORTED_MODULE_6__["ModalService"] },
-    { type: _services__WEBPACK_IMPORTED_MODULE_8__["CalendarService"] }
+    { type: _services__WEBPACK_IMPORTED_MODULE_8__["CalendarService"] },
+    { type: _account_user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"] }
 ];
 CalendarFormComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1419,7 +1587,7 @@ CalendarFormComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
         template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./calendar-form.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/calendar/calendar-form/calendar-form.component.html")).default,
         styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./calendar-form.component.css */ "./src/app/calendar/calendar-form/calendar-form.component.css")).default]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_shared_modal_services__WEBPACK_IMPORTED_MODULE_6__["ModalService"], _services__WEBPACK_IMPORTED_MODULE_8__["CalendarService"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_shared_modal_services__WEBPACK_IMPORTED_MODULE_6__["ModalService"], _services__WEBPACK_IMPORTED_MODULE_8__["CalendarService"], _account_user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"]])
 ], CalendarFormComponent);
 
 
@@ -1440,12 +1608,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var _calendar_form_calendar_form_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./calendar-form/calendar-form.component */ "./src/app/calendar/calendar-form/calendar-form.component.ts");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _add_event_add_event_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./add-event/add-event.component */ "./src/app/calendar/add-event/add-event.component.ts");
+/* harmony import */ var _account_auth_guard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../account/auth.guard */ "./src/app/account/auth.guard.ts");
+
+
 
 
 
 
 const routes = [
-    { path: 'calendar', component: _calendar_form_calendar_form_component__WEBPACK_IMPORTED_MODULE_2__["CalendarFormComponent"] }
+    { path: 'calendar', component: _calendar_form_calendar_form_component__WEBPACK_IMPORTED_MODULE_2__["CalendarFormComponent"] },
+    { path: 'add-event', component: _add_event_add_event_component__WEBPACK_IMPORTED_MODULE_4__["AddEventComponent"], canActivate: [_account_auth_guard__WEBPACK_IMPORTED_MODULE_5__["AuthGuard"]] }
 ];
 let CalendarRoutingModule = class CalendarRoutingModule {
 };
@@ -2074,16 +2247,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_services */ "./src/app/shared/navigation/_services/index.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _account_user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../account/user.service */ "./src/app/account/user.service.ts");
+
 
 
 
 
 
 let NavigationComponent = class NavigationComponent {
-    constructor(cdr, router, navService) {
+    constructor(cdr, router, navService, auth) {
         this.cdr = cdr;
         this.router = router;
         this.navService = navService;
+        this.auth = auth;
         this.displayName = '';
         this.showSidebar = false;
         this.showExpanded = false;
@@ -2120,11 +2296,15 @@ let NavigationComponent = class NavigationComponent {
         if (!this.showSidebar)
             this.showExpanded = false;
     }
+    logout() {
+        this.auth.signOut();
+    }
 };
 NavigationComponent.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
-    { type: _services__WEBPACK_IMPORTED_MODULE_3__["NavigationService"] }
+    { type: _services__WEBPACK_IMPORTED_MODULE_3__["NavigationService"] },
+    { type: _account_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"] }
 ];
 NavigationComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2133,7 +2313,7 @@ NavigationComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
         styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./navigation.component.scss */ "./src/app/shared/navigation/navigation.component.scss")).default]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _services__WEBPACK_IMPORTED_MODULE_3__["NavigationService"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _services__WEBPACK_IMPORTED_MODULE_3__["NavigationService"], _account_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"]])
 ], NavigationComponent);
 
 

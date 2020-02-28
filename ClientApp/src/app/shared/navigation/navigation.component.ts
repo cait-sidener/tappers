@@ -2,6 +2,7 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef, OnInit, OnDestro
 import { Subscription } from 'rxjs';
 import { NavigationService } from './_services';
 import { Router } from '@angular/router';
+import { UserService } from '../../account/user.service';
 
 @Component({
 	selector: 'app-navigation',
@@ -21,7 +22,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
 	private subscription: Subscription = new Subscription();
 
-	constructor(private cdr: ChangeDetectorRef, private router: Router, public navService: NavigationService) { }
+	constructor(private cdr: ChangeDetectorRef, private router: Router, public navService: NavigationService, public auth: UserService) { }
 	data() {
 		return {
 			isOpen: false,
@@ -52,6 +53,10 @@ export class NavigationComponent implements OnInit, OnDestroy {
 		if (state) this.showSidebar = state;
 		this.showSidebar = !this.showSidebar;
 		if (!this.showSidebar) this.showExpanded = false;
+	}
+
+	logout() {
+		this.auth.signOut();
 	}
 
 }

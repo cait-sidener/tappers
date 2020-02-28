@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgbSlideEvent, NgbSlideEventSource, NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-archive-pics',
@@ -6,10 +7,35 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./archive-pics.component.css']
 })
 export class ArchivePicsComponent implements OnInit {
+    images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+    showNavigationArrows = true;
+    showNavigationIndicators = true;
+    pauseOnHover = true;
 
-  constructor() { }
+    @ViewChild('mycarousel', { static: true }) carousel: NgbCarousel;
 
-  ngOnInit(): void {
-  }
 
+    constructor() {      
+    }
+    ngOnInit() {}
+
+    startCarousel() {
+        this.carousel.cycle();
+    }
+
+    pauseCarousel() {
+        this.carousel.pause();
+    }
+
+    moveNext() {
+        this.carousel.next();
+    }
+
+    getPrev() {
+        this.carousel.prev();
+    }
+
+    goToSlide(slide: any) {
+        this.carousel.select(slide);
+    }
 }

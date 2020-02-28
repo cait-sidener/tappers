@@ -58,8 +58,8 @@
 									"with": "src/environments/environment.prod.ts"
 								}
 							],
-							"baseHref": "/SSO/",
-							"deployUrl": "/SSO/",
+							"baseHref": "/EighthStreetTaproom/",
+							"deployUrl": "/EighthStreetTaproom/",
 							"optimization": true,
 							"outputHashing": "all",
 							"sourceMap": false,

@@ -1,0 +1,42 @@
+<div class="h-screen">
+	<div class="mt-4 w-full bg-gray-900 p-10 text-tan rounded shadow-2 opacity-75">
+		<div class="col-12 mb-4">
+			<h4>Registration</h4>
+		</div>
+
+		<div class="col-12">
+			<div class="row" *ngIf="authError">
+				<div class="col-12 alert alert-danger">
+					{{ authError?.message }}
+				</div>
+			</div>
+			<form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
+				<div class="mb-2">
+					<label for="firstName">First name</label>
+					<input ngModel #firstname="ngModel" name="firstName" type="text" class="form-control rounded p-1 text-black ml-2" id="firstName">
+
+					<label class="mx-2" for="lastName">Last name</label>
+					<input ngModel #lastname="ngModel" name="lastName" type="text" class="form-control rounded p-1 text-black" id="lastName" value="">
+				</div>
+				<div class="w-full mb-2">
+						<label for="email">Email</label>
+						<input ngModel #email="ngModel" name="email" type="email" class="w-full rounded p-1 form-control text-black">
+					</div>
+				<div>
+					<div class="w-full mb-2">
+							<label for="password">Password</label>
+							<input ngModel #password="ngModel" name="password" type="password" class="w-full rounded p-1 form-control text-black">
+					</div>
+					<div class="w-full mb-4">
+							<label>Confirm Password</label>
+							<input name="password" type="password" class="w-full rounded p-1 form-control text-black">
+					</div>
+					<div class="flex justify-end">
+						<a class="btn bg-tan text-gray-900 rounded p-2 shadow-2 mr-2" href="/login-home">Back</a>
+						<button class="btn bg-tan text-gray-900 rounded p-2 shadow-2 uppercase" type="submit">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

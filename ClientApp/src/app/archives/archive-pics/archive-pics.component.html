@@ -1,1 +1,45 @@
-<p>archive-pics works!</p>
+<div class="py-6 container w-full">
+	<div class="w-full">
+		<ngb-carousel #mycarousel
+					  [showNavigationArrows]="true"
+					  [showNavigationIndicators]="true"
+					  interval="10000"
+					  [keyboard]="true"
+					  [pauseOnHover]="true"
+					  [wrap]="true"
+					  [activeId]="'slideTwo'"
+					  (slide)="onSlide($event)">
+			<ng-template ngbSlide>
+				<div class="picsum-img-wrapper">
+					<img src="../../assets/images/IMG_0029.jpg" alt="Album Cover Closeup">
+				</div>
+				<div class="carousel-caption">
+					<h3>Album Cover Closeup</h3>
+					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+				</div>
+			</ng-template>
+			<ng-template ngbSlide>
+				<div class="picsum-img-wrapper">
+					<img src="../../assets/images/IMG_0030.jpg" alt="Taproom">
+				</div>
+				<div class="carousel-caption">
+					<h3>Taproom</h3>
+					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+				</div>
+			</ng-template>
+			<ng-template ngbSlide>
+				<div class="picsum-img-wrapper">
+					<img src="../../assets/images/IMG_0031.jpg" alt="Taproom Exterior">
+				</div>
+				<div class="carousel-caption">
+					<h3>Taproom Exterior</h3>
+					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+				</div>
+			</ng-template>
+		</ngb-carousel>
+		<div class="flex justify-center text-tan my-4">
+			<button (click)="goToSlide('slideThree')" class="fa fa-pause"></button>
+			<button (click)="pauseCarousel()" class="fa fa-play mx-4"></button>
+		</div>
+	</div>
+</div>
